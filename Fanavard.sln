@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanavard", "Fanavard\Fanavard.csproj", "{0BB96BEC-C89B-46EB-9AB6-431FE096D380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanavard_DB", "Fanavard_DB\Fanavard_DB.csproj", "{0993F54C-CC7B-4AA9-8312-3F3CFF8A6241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BB96BEC-C89B-46EB-9AB6-431FE096D380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB96BEC-C89B-46EB-9AB6-431FE096D380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB96BEC-C89B-46EB-9AB6-431FE096D380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB96BEC-C89B-46EB-9AB6-431FE096D380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0993F54C-CC7B-4AA9-8312-3F3CFF8A6241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0993F54C-CC7B-4AA9-8312-3F3CFF8A6241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0993F54C-CC7B-4AA9-8312-3F3CFF8A6241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0993F54C-CC7B-4AA9-8312-3F3CFF8A6241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE385C90-5567-4582-AA9D-4E7FF642AE78}
+	EndGlobalSection
+EndGlobal

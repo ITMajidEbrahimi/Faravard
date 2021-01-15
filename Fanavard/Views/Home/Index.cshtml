@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+<div class="row">
+    <div class="col-3"><input type="text" id="txt_TedadJabeha" class="form-check form-control" placeholder="تعداد جعبه های موجود" /></div>
+    <div class="col-3"><input type="text" id="txt_Andazeyejabeha" class="form-check form-control" placeholder="اندازه جعبه ها" /></div>
+    <div class="col-2">
+        <button type="button" name="add" id="p1" class="btn btn-info btn-sm add">
+            اضافه کردن ردیف
+        </button>
+    </div>
+    <div class="col-2">
+        <button id="Save" class="btn btn-success btn-sm add">
+            نمایش نتیجه
+        </button>
+    </div>
+</div>
+<div class="row">
+    <table class="table table-bordered" id="item_table">
+        <tr>
+            <th>حجم کالاها(n)</th>
+        </tr>
+    </table>
+</div>
+<div class="row" id="D_Res">    
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#p1").click(function () {
+            var html = '';
+            html += '<tr>';
+            html += '<td><input type="text" name="item_name[]" class="form-control item_name" /></td>';
+            html += '</tr>';
+            $('#item_table').append(html);
+        });
+    });
+    $("#Save").click(function () {
+        var count = 1;
+        var PArray = [];
+        var val = "";
+        $('.item_name').each(function () {
+            val += $(this).val() + ',';
+            count = count + 1;
+            PArray.push($(this).val());
+        });
+        var Params = {
+            P_M: $("#txt_TedadJabeha").val(),
+            P_k: $("#txt_Andazeyejabeha").val(),
+            Qty: PArray
+        };
+        console.log(Params);     
+        PostAndGetRes(Params);
+    });
+    function PostAndGetRes(Params) {
+        fetch("/Res/PostAndGetResult", {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            method: 'post',
+            body: JSON.stringify(Params)
+        }).then(function (response) {
+            return response.json();
+        })
+            .then(function (response) {
+                var a = JSON.parse(JSON.stringify(response));
+                //alert(a.Res);
+                document.getElementById("D_Res").innerHTML = "بیشترین تعداد شیءهایی که میتوانیم  در جعبه ها قرار دهیم" +"("+ a.Res +") می باشد." ;
+            
+            })
+            .catch(function (err) {
+                console.log('eerrorme');
+                console.log('error', err);
+            });
+    };
+</script>
