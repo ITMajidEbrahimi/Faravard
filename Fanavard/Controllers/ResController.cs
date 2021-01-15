@@ -31,6 +31,5 @@ namespace Fanavard.Controllers
             //parameters = null;
             return Json(row);
         }
-
     }
 }
