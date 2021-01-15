@@ -27,7 +27,6 @@ namespace Fanavard.Controllers
             parameters.Add("@Type_Kalas", Qtystr);
             int res = 0;
              res = await _db.QueryAsync("[SP_Mohasebeh]", parameters);
-
             row.Add("Res", res.ToString());
             //parameters = null;
             return Json(row);
