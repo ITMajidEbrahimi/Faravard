@@ -8,8 +8,7 @@ namespace Fanavard.Controllers
     {
         public ResController(Fanavard_DB.General.F_Interfaces.IDB _IDB )
         {
-            _db = _IDB;
-            
+            _db = _IDB;            
         }
         private readonly Fanavard_DB.General.F_Interfaces.IDB _db;
         private readonly Dictionary<string, string> row = new Dictionary<string, string>();
