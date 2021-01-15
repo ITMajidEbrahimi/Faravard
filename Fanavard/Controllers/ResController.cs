@@ -12,8 +12,6 @@ namespace Fanavard.Controllers
         }
         private readonly Fanavard_DB.General.F_Interfaces.IDB _db;
         private readonly Dictionary<string, string> row = new Dictionary<string, string>();
-        //[HttpPost]
-        //[Route("PostAndGetResult")]
         [HttpPost]
         [Route("Res/PostAndGetResult")]
         public  async Task<JsonResult>  PostAndGetResult([FromBody] dynamic _Data)
